@@ -40,8 +40,6 @@ a {
     max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
-
-    
 }
 
 /* header */
@@ -64,7 +62,6 @@ a {
 .images {
     display: block;
 }
-
 
 .logo {
     font-family: "Raleway", sans-serif;
@@ -105,7 +102,6 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
-
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -241,7 +237,6 @@ padding-bottom: 185px;
     color: #2e2f42;
     margin-bottom: 8px;
     text-align: left;
-
 }
 
 .list-section-team {
@@ -257,7 +252,6 @@ padding-bottom: 185px;
 
 .section-two {
     padding: 120px 0;
-
 }
 
 .container-icon {
@@ -282,8 +276,6 @@ padding-bottom: 185px;
 .text-list-section-two {
     line-height: 1.5;
     letter-spacing: 0.02em;
-    
-
 }
 
 /*section-thre*/
@@ -291,7 +283,6 @@ padding-bottom: 185px;
 .section-three {
     background-color: #F4F4FD;
     padding: 120px 0;
-
 }
 
 .text-section-three {
@@ -320,8 +311,6 @@ padding-bottom: 185px;
 .list-icon {
     width: 40px;
     height: 40px;
-
-
 }
 
 .social-network {
@@ -335,8 +324,6 @@ padding-bottom: 185px;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
-
-
 
 .social-network:hover,
 .social-network:focus {
@@ -368,7 +355,6 @@ padding-bottom: 185px;
 
 .name-position {
     padding: 32px 0;
-
 }
 
 .section-four {
@@ -386,12 +372,10 @@ padding-bottom: 185px;
 .list-section-four {
     width: calc((100% - 48px) / 3);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-
 }
 
 .list-section-four:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); 
-
 }
 
 .list-section-four:hover .overley {
@@ -400,7 +384,6 @@ padding-bottom: 185px;
 
 
 .application-name-application-category {
-
     position: relative; 
     overflow: hidden;
 }
@@ -418,7 +401,6 @@ padding-bottom: 185px;
     transform: translateY(100%); 
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 0px;
-
     height: 100%;
     width: 100%;
 }
@@ -463,19 +445,10 @@ padding-bottom: 185px;
     max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
-
-    
-
-}
-
-.container-footer-social-media {
-    
-
 }
 
 .footer-box {
     margin-right: 120px;
-    
 }
 
 .text-social-media {
@@ -517,8 +490,87 @@ padding-bottom: 185px;
 
 .icon-svg-footer {
     fill: #f4f4fd;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 
 }
  
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 408px;
+    min-height: 584px;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.2); ;
+    background-color: #fcfcfc; 
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    padding: 72px 24px 24px 24px;
+
+}
+
+.backdrop:not(.is-open) .modal {
+    transform: translate(-50%, -50%) scale(1.5);
+
+}
+
+.modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    fill: #2e2f42;
+
+    background-color: #e7e9fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: 1px solid #0000001a;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.modal-close:hover > .close-icon,
+.modal-close:focus > .close-icon {
+  fill: #ffffff;
+}
+
+.icon-svg-close {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
 
 
